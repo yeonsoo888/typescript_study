@@ -1,6 +1,6 @@
 let name1 : string = "kim";
-let arrName : string[] = ['kim',"park"]
-let objName : {name? : string} = {name : "kim"}
+let arrName : (string | number)[] = ['kim',"park"]
+let objName : {name? : (string | boolean)} = {name : "kim"}
 
 // union type
 let 이름 : string | number = 'kim'
@@ -45,4 +45,25 @@ class User {
     constructor(name:string) {
         this.name = name;
     }
+}
+
+//narrowing
+function myFunc(x: number | string) {
+    if(typeof x === "number") {
+        return x + 2;
+    } else if (typeof x === "string") {
+        return x;
+    } else {
+        return 0;
+    }
+    // switch (typeof x) {
+    //     case("number") : 
+    //         return x + 2;
+    //         break;
+    //     case("string") :
+    //         return x;
+    //         break;
+    //     default : 
+    //         return x;
+    // }
 }
