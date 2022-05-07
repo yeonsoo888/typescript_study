@@ -64,3 +64,12 @@ type Animal2 = {name : string , age : number}
 
 let animal : Animal;
 let animal2 : Animal2 = {name : "kim", age : 20}
+
+// object readonly 속성
+type Girfriend = {
+    readonly name : string
+}
+const girfriend : Girfriend = {
+    name : "ember"
+}
+
