@@ -141,3 +141,38 @@ type 함수타입 = (a: string) => number;
 const 함수2 : 함수타입 = function() {
     return 2;
 }
+
+//object 자료 안의 함수 타입지정 (methods)
+let 회원정보 = {
+    name: "kim",
+    plusOne(a : number):number {
+        return a + 1;
+    },
+    changeName():void {
+
+    }
+}
+
+회원정보.plusOne(1);
+
+type 함수타입1 = (a : string) => string;
+type 함수타입2 = (a : string) => number;
+
+const cutZero:함수타입1 = (str)  => {
+    if(str.substring(0,1) == "0") {
+        return str.substring(1);
+    }
+    return str;
+}
+const removeDash:함수타입2 = (str) => {
+    return parseFloat(str.replace(/-/g,""));
+}
+const newFunc2 = (a: string,func1:함수타입1,func2:함수타입2) => {
+    let result = func1(a);
+    let result2 = func2(result);
+    console.log(result2);
+}
+
+newFunc2("010-1111-2222",cutZero,removeDash);
+
+
