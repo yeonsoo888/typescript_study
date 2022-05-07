@@ -132,8 +132,12 @@ let 자료 = {
 // object value 값을 그대로 타입으로 지정
 // object 속성들 모두에 readonly 붙임
 
-function myFunc2(a: "kim") {
-
-}
-
+function myFunc2(a: "kim") {}
 myFunc2(자료.name);
+
+// 함수타입 표현방법
+type 함수타입 = (a: string) => number;
+
+const 함수2 : 함수타입 = function() {
+    return 2;
+}
