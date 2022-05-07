@@ -67,9 +67,22 @@ let animal2 : Animal2 = {name : "kim", age : 20}
 
 // object readonly 속성
 type Girfriend = {
-    readonly name : string
+    readonly name? : string
 }
 const girfriend : Girfriend = {
     name : "ember"
 }
+// const object의 값 변경 막기 , 하지만 에러만 있을뿐 변경 가능함.
+// girfriend.name = "유라";
 
+
+// type alias extend 하기
+type Name = string;
+type Age = number;
+type Person = Name | Age;
+
+type PositionX = {x : number};
+type PositionY = {y : number};
+type NewType = PositionX & PositionY;
+
+let position : NewType = {x: 10, y:20}
