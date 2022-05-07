@@ -110,3 +110,8 @@ type ConfirmData = {name : string, phone : number, email : string}
 // type alias를 재활용
 type addAdult = {adult : boolean}
 type ConfirmData2 = ConfirmData & addAdult;
+
+
+//literal types
+let 이름3 : 'kim';
+이름 = "kim";
