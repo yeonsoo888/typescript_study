@@ -60,5 +60,7 @@ function myFunc(x: number | string) : (number | string) {
 
 //type alias
 type Animal = string | number | undefined
+type Animal2 = {name : string , age : number}
 
 let animal : Animal;
+let animal2 : Animal2 = {name : "kim", age : 20}
