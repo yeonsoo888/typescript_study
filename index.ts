@@ -48,7 +48,7 @@ class User {
 }
 
 //narrowing
-function myFunc(x: number | string) {
+function myFunc(x: number | string) : (number | string) {
     if(typeof x === "number") {
         return x + 2;
     } else if (typeof x === "string") {
@@ -56,14 +56,9 @@ function myFunc(x: number | string) {
     } else {
         return 0;
     }
-    // switch (typeof x) {
-    //     case("number") : 
-    //         return x + 2;
-    //         break;
-    //     case("string") :
-    //         return x;
-    //         break;
-    //     default : 
-    //         return x;
-    // }
 }
+
+//type alias
+type Animal = string | number | undefined
+
+let animal : Animal;
