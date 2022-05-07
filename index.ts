@@ -124,3 +124,16 @@ function 함수1(a : "hello"): 1 | 0 {
 function rcp(a : "가위" | "바위" | "보") : ("가위" | "바위" |"보")[] {
     return ["가위","보"];
 }
+
+// as const
+let 자료 = {
+    name : "kim"
+} as const;
+// object value 값을 그대로 타입으로 지정
+// object 속성들 모두에 readonly 붙임
+
+function myFunc2(a: "kim") {
+
+}
+
+myFunc2(자료.name);
