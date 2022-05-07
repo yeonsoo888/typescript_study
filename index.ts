@@ -115,3 +115,12 @@ type ConfirmData2 = ConfirmData & addAdult;
 //literal types
 let 이름3 : 'kim';
 이름 = "kim";
+
+function 함수1(a : "hello"): 1 | 0 {
+    return 1;
+    // return 32;
+}
+
+function rcp(a : "가위" | "바위" | "보") : ("가위" | "바위" |"보")[] {
+    return ["가위","보"];
+}
